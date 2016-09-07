@@ -7,14 +7,10 @@
    1 "x"})
 
 (defn- extract-neighborhoods [state]
-  (->> state
-       (cons 0)
-       (partition 3 1 (repeat 0))))
+  (partition 3 1 (repeat 0) (cons 0 state)))
 
 (defn- evolve-once [rule state]
-  (->> state
-       extract-neighborhoods
-       (mapv rule)))
+  (mapv rule (extract-neighborhoods state)))
 
 (defn evolve [rule initial-state time-steps]
   (->> initial-state
