@@ -1,6 +1,7 @@
 (ns cellular-automata.rules-test
-  (:require [midje.sweet :refer :all]
-            [cellular-automata.rules :as rules]))
+  (:require
+    [midje.sweet :refer :all]
+    [cellular-automata.rules :as rules]))
 
 (facts
   "about rules"
