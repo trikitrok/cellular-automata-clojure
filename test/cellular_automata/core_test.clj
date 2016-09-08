@@ -5,10 +5,11 @@
     [cellular-automata.rules :as rules]))
 
 (facts
-  "about cellular automata"
+  "an elementary cellular automaton"
 
   (facts
-    "about evolving an automaton"
+    "evolves from an initial state for some time steps
+    following a given rule"
     (automata/evolve
       rules/rule-90
       [1 1 0 1 0 1 0]
@@ -20,7 +21,7 @@
              [0 1 0 0 0 1 0]])
 
   (facts
-    "about rendering an automaton"
+    "can be rendered as text lines"
     (automata/render
       [[1 1 0 1 0 1 0]
        [1 1 0 0 0 0 1]
