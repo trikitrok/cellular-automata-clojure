@@ -17,10 +17,10 @@
        (iterate (partial evolve-once rule))
        (take (inc time-steps))))
 
-(defn- render-line [line]
+(defn- render-state [line]
   (apply str (map representations line)))
 
 (defn render [states]
   (->> states
-       (map render-line)
+       (map render-state)
        (string/join "\n")))
